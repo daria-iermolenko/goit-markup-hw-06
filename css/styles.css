@@ -80,7 +80,7 @@ color: #404bbf;
         gap: 40px; */
     }
 
-          .burger-bth {
+         .burger-btn {
         padding: 0;
         border: 0;
         background-color: transparent;
@@ -141,6 +141,73 @@ border-radius: 2px;
 .header-link.current {
 color: #404bbf; */
 /* } */
+
+.mobile-menu {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: #fff;
+transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+opacity: 0;
+visibility: hidden;
+pointer-events: none;
+}
+
+.mobile-menu.is-open {
+opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+.mobile-menu-container {
+    position: relative;
+    padding-top: 72px;
+    padding-bottom: 40px;
+    display: flex;
+    width: 100%;
+}
+.mobile-menu-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+    margin-left: auto;
+    background-color: #e7e9fc;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mob-close-button:hover,
+.mob-close-button:focus {
+    background-color: #404bbf;
+    border: none;
+}
+
+.mob-close-icon {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    color: #404BBF;
+}
+
+.mob-close-button:hover .close-icon,
+.mob-close-button:focus .close-icon {
+    fill: #ffffff;
+}
+
+
+
+
+
+.mobile-menu-nav {
+margin-bottom: auto;
+}
 
 
 .hero {
@@ -292,7 +359,6 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
 margin: 0 auto;
 padding-top: 32px;
 padding-bottom: 32px;
-
 }
 
 .team-list-title {
@@ -316,9 +382,9 @@ font-weight: 500;
 .container-icons {
 display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: row;
     gap: 24px;
-  
-   
 }
 .container-icons-soc {
 display: flex;
@@ -845,13 +911,16 @@ width: 100%;
        padding-left: 16px;
        padding-right: 16px;
     }
-        
+       
+        .mobile-menu {
+            display: none;
+        }
  .link {
 display: flex;
  align-items: center;
  gap: 40px; 
  }
-        .burger-bth,
+        .burger-btn,
         .burger-icon {
             display: none;
         }
@@ -940,6 +1009,7 @@ flex-direction: column;
     width: calc((100% - 64px) / 2);
 }
 
+
 .portfolio {
     padding-top: 80px;
     padding-bottom: 80px;
@@ -962,13 +1032,17 @@ width: calc((100% - 72px) / 2);
         padding-right: 15px;
         margin: 0 auto;
     }
-
- .burger-bth,
+.mobile-menu {
+    display: none;
+}
+ .burger-btn,
  .burger-icon {
      display: none;
  }
 .header-logo {
  margin-right: 76px;
+
+
 }
  .link {
     flex-direction: row;
@@ -993,9 +1067,7 @@ width: calc((100% - 72px) / 2);
     padding: 24px 0;
  }
 
- }
     
-
 .section {
     padding-top: 120px;
      padding-bottom: 120px;
@@ -1024,6 +1096,7 @@ width: calc((100% - 72px) / 2);
 .priorities {
             width: calc((100% - 72px) / 4);
 }
+
 .team {
 padding-top: 120px;
  padding-bottom: 120px;
@@ -1034,6 +1107,7 @@ padding-top: 120px;
 .team-list {
     width: calc((100% - 72px) / 4);
 }
+
 .portfolio {
 padding-top: 120px;
 padding-bottom: 120px;
